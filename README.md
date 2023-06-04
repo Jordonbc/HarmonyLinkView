@@ -1,44 +1,41 @@
-[![GitHub release](https://img.shields.io/github/release/Jordonbc/UnrealToolkit)](https://github.com/Jordonbc/UnrealToolkit/releases/) ![open issues](https://img.shields.io/github/issues-raw/Jordonbc/UnrealToolkit) ![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=104) ![made-with-rust](https://img.shields.io/badge/Made%20With-Rust-Green) ![GitHub last commit](https://img.shields.io/github/last-commit/jordonbc/UnrealToolkit)
-# UnrealToolkit
-Unreal Toolkit aims to make the process of packaging easier and potentially faster. With this program you’re able to package an Unreal Engine game without ever needing to open up the Editor.
+# HarmonyLink: View
 
-This program uses the Rust programming language for the backend and uses the [Tauri](https://tauri.app) windowing system which allows me to make the GUI from HTML and JavaScript. I aim for it to be cross-compatible with Windows, Mac and Linux.
+[![GitHub release](https://img.shields.io/github/release/Jordonbc/HarmonyLinkView)](https://github.com/Jordonbc/HarmonyLinkView/releases/)
+![open issues](https://img.shields.io/github/issues-raw/Jordonbc/HarmonyLinkView)
+![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=104)
+![made-with-rust](https://img.shields.io/badge/Made%20With-Rust-Green)
+![GitHub last commit](https://img.shields.io/github/last-commit/Jordonbc/HarmonyLinkView)
 
-Unreal Toolkit allows you to target multiple configurations and platforms, this makes it a versatile tool for game developers like myself.
+HarmonyLink: View is an innovative viewer application created using the Rust programming language. It provides real-time access to critical system metrics on handheld devices, enhancing your gaming experience and immersing you in a personalized gameplay environment. This viewer application is specifically tailored for the Steam Deck.
 
-<p align="center"><img src=resources/Unreal_Toolkit_window.png/></p>
+## Features
 
-# Features
-- Easy to use
-- Package multiple configurations.
-- Package client and server builds.
-- Uses less RAM than Unreal Editor (Which allow more threads for compiling faster).
-- Ability to remove the crash reporter (reduces game size by 1.5GB, however makes crashes less user-friendly).
+- Device Identification: HarmonyLink: View enables games to identify the specific handheld device they are operating on.
+- Real-Time Metrics: Gain access to real-time data about the handheld device's power usage and docking status through HarmonyLink: View, creating a more responsive and immersive gaming experience.
+- Cross-Platform Compatibility: HarmonyLink: View extends its functionality to Windows games running on Proton/Wine, preparing it for a wide array of future handheld devices.
 
-## Planned Features
-- Ability to build lighting for all or selected maps.
-- Show and parse through log files from Unreal.
-- Allow user to automatically create zipped archive of builds after packaging.
-- Upload completed builds to external server.
-- Create manifest json file with error-checking for multi-version production e.g. Steam beta channels.
+## How It Works
 
-# Usage
-1. Once Installed on your prefered platform go to the settings tab and locate your Unreal Engine install
-2. Go back to the Home page and select your .uproject file
-3. Set the output directory (usually something like myProjectFolder/packaged)
-4. Set the desired configuration for your project
-5. Press the package button and wait for it to change back (*planned in a future release to briefly change colour and text to show completion, if using the dev build, UE will be outputted to console*)
+HarmonyLink: View operates as a standalone viewer application. It connects to the HarmonyLink server running on the host side (native Linux or Windows) and provides a user-friendly interface to monitor the real-time metrics. The server, a Rust DLL, runs on the host system, and games access the metrics via an API, running natively or through Proton.
 
-# Disclaimer
-This application does NOT distribute Epic Games software or source code.
+Developers and modders can easily implement GET and POST requests from the API to integrate system metrics into games. The power metrics and docking status can be used to adapt the game's quality settings, providing a more customized gaming experience.
 
-This application requires the user to have already downloaded and installed Unreal Engine and then point Unreal Toolkit to the installation path.
+## Building from Source
 
-The term *Unreal* is owned by Epic Games, If required name can be changed.
+To build HarmonyLink: View from source, follow these steps:
 
-# License
-This project is licensed under the GNU General Public License v3.0.
+1. Install Rust and Cargo on your development machine. Instructions can be found at [https://www.rust-lang.org/](https://www.rust-lang.org/).
+2. Clone the repository: `git clone https://github.com/Jordonbc/HarmonyLinkView.git`
+3. Navigate to the project directory: `cd HarmonyLinkView`
+4. Install the necessary dependencies by running: `cargo install tauri-cli`
+5. Build the application by running: `cargo tauri build`
+6. After a successful build, you will find the executable for your platform in the `src-tauri/target/release` directory.
+7. Run the HarmonyLink: View application on your handheld device.
 
-GNU General Public License v3.0 © Jordon Brooks.
+## Contributions and Feedback
 
-If you use this for your games, please consider helping me out by sponsoring 🙏
+Your feedback, questions, and suggestions are highly appreciated. If you'd like to contribute to the HarmonyLink: View project, feel free to submit pull requests. Let's work together to enhance the handheld gaming experience!
+
+## License
+
+HarmonyLink: View is released under the [GNU General Public License v3.0 or later](https://www.gnu.org/licenses/gpl-3.0.en.html). Please refer to the license file for more information.
