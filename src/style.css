@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.info-block {
+  background-color: #1f1f1f;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.info-block h2 {
+  margin-top: 0;
+  color: #FF9800;
+  border-bottom: 1px solid #282828;
+  padding-bottom: 10px;
+}
+
+.info-block ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.info-block ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #282828;
+}
+
+.info-block ul li:last-child {
+  border-bottom: none;
+}
+
+.info-block:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+.error-message {
+  padding: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+header {
+  background-color: #FF9800;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header h1 {
+  color: #FFFFFF;
+  font-size: 2em;
+  margin: 0;
+  padding: 10px;
+}
+
+.tick-cross {
+  font-size: 1.2em; /* Adjust the size as needed */
+  margin-right: 5px; /* Add some spacing between the tick/cross and the text */
+}
