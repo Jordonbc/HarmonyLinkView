@@ -4,7 +4,6 @@
 )]
 
 use log::trace;
-use log4rs;
 
 use std::env;
 use tauri::{Manager};
@@ -148,7 +147,6 @@ fn refresh() -> Result<(), Box<dyn std::error::Error>> {
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    log4rs::init_file("logging_config.yaml", Default::default()).unwrap();
     trace!("Hello, World! I'm awake!");
     
     tauri::Builder::default()
