@@ -11,6 +11,7 @@ const DISPLAY_NAMES = {
 
 function update_ui_elements(info) {
   const container = document.querySelector('.container');
+  const chargingImage = document.getElementById('charging-image');
 
   // Clear the container first
   container.innerHTML = '';
@@ -38,6 +39,13 @@ function update_ui_elements(info) {
   } else {
     const data = info.payload.Ok;
     console.log(data);
+
+    // Update the image source based on charging status
+    if (data.battery_info && data.battery_info.charging_status === 'Charging') {
+      chargingImage.src = 'assets/performance.jpg';
+    } else {
+      chargingImage.src = 'assets/battery.png';
+    }
 
     // Loop through all sections
     Object.keys(data).forEach((section) => {
@@ -89,6 +97,7 @@ function update_ui_elements(info) {
     });
   }
 }
+
 
 
 window.addEventListener("DOMContentLoaded", async () => {

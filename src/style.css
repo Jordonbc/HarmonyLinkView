@@ -73,3 +73,15 @@ header h1 {
   font-size: 1.2em; /* Adjust the size as needed */
   margin-right: 5px; /* Add some spacing between the tick/cross and the text */
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#charging-image {
+  max-width: 100%;
+  height: auto;
+}
+
